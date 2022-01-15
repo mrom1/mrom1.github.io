@@ -1,64 +1,102 @@
-import colors from "vuetify/es5/util/colors"
+import colors from 'vuetify/es5/util/colors'
 
 export default {
-  // Target: https://go.nuxtjs.dev/config-target
-  target: "static",
-
-  // Disable Server sided rendering to enable github deploy
+  /*
+   ** Nuxt target
+   ** See https://nuxtjs.org/api/configuration-target
+   */
+  target: 'static',
   ssr: false,
-
-  // Global page headers: https://go.nuxtjs.dev/config-head
+  /*
+   ** Headers of the page
+   ** See https://nuxtjs.org/api/configuration-head
+   */
   head: {
-    titleTemplate: "%s",
-    title: "Reverse Engineering",
-    htmlAttrs: {
-      lang: "en"
-    },
+    title: 'Blog',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" }
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      {
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || ''
+      }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/images/icon/mrom1.ico' }
     ]
   },
-
-  // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
-
-  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
-
-  // Auto import components: https://go.nuxtjs.dev/config-components
+  /*
+   ** Global CSS
+   */
+  css: ['~assets/css/tailwind.css', '~assets/css/content.css'],
+  /*
+   ** Plugins to load before mounting the App
+   ** https://nuxtjs.org/guide/plugins
+   */
+  plugins: ['~/plugins/vue-scrollactive.js', '~/plugins/conversion-utils.js'],
+  /*
+   ** Auto import components
+   ** See https://nuxtjs.org/api/configuration-components
+   */
   components: true,
-
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  /*
+   ** Nuxt.js dev-modules
+   */
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    "@nuxtjs/eslint-module",
+    // Doc: https://github.com/nuxt-community/eslint-module
+    '@nuxtjs/eslint-module',
+    // Doc: https://github.com/nuxt-community/stylelint-module
+    '@nuxtjs/stylelint-module',
+    // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+    '@nuxtjs/tailwindcss',
     // https://go.nuxtjs.dev/vuetify
-    "@nuxtjs/vuetify"
+    '@nuxtjs/vuetify'
   ],
-
-  // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  /*
+   ** Nuxt.js modules
+   */
+  modules: [
+    // Doc: https://github.com/nuxt/content
+    '@nuxt/content',
+    '@nuxtjs/style-resources'
+  ],
+  /*
+   ** Content module configuration
+   ** See https://content.nuxtjs.org/configuration
+   */
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-atom-dark.css'
+      }
+    },
+    liveEdit: false
+  },
+  /*
+   ** Build configuration
+   ** See https://nuxtjs.org/api/configuration-build/
+   */
+  build: {},
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
+    treeShake: true,
     theme: {
       dark: true,
       themes: {
+        light: {
+          primary: colors.purple,
+          secondary: colors.grey.darken1,
+          accent: colors.shades.black,
+          error: colors.red.accent3,
+          background: colors.indigo.lighten5
+        },
         dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
+          primary: '#48bb78',
+          background: colors.indigo.base
         }
       }
     }
-  },
-
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {}
+  }
 }
