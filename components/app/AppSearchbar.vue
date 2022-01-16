@@ -1,12 +1,14 @@
 <template>
   <div class="searchbarContainer flex w-full pt-3 pl-4">
     <v-form ref="searchbarForm">
-      <v-autocomplete
+      <v-combobox
         v-model="select"
         :items="items"
         :loading="loading"
         :search-input.sync="search"
         dense
+        autofocus
+        auto-select-first
         hide-no-data
         hide-selected
         item-text="title"
@@ -15,7 +17,7 @@
         prepend-inner-icon="mdi-database-search"
         return-object
         single-line
-      ></v-autocomplete>
+      ></v-combobox>
       <v-expand-transition>
         <div v-if="select">{{ gotoArticle(select) }}</div>
       </v-expand-transition>
