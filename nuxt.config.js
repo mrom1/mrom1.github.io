@@ -88,6 +88,10 @@ export default {
    */
   build: {},
 
+  generate: {
+    fallback: true
+  },
+
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     treeShake: true,
