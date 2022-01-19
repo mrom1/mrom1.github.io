@@ -12,24 +12,33 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'Blog',
+    title: 'mrom1/blog',
+    author: 'mrom1',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          'Software Development Blog about IT Security, Reverse Engineering and Modern C++.'
       }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/images/icon/mrom1.ico' }
-    ]
+    ],
+    htmlAttrs: {
+      lang: 'en'
+    }
   },
   /*
    ** Global CSS
    */
-  css: ['~assets/css/tailwind.css', '~assets/css/content.css'],
+  css: [
+    '~assets/css/tailwind.css',
+    '~assets/css/content.css',
+    '~assets/css/font-face.css'
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins

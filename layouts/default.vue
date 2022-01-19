@@ -4,7 +4,7 @@
       <!-- Sidebar -->
       <div class="sidebarLayoutContainer">
         <AppSidebarArticle v-show="isArticle" />
-        <AppSidebarHome v-show="isHomeIndex" />
+        <AppSidebarHome v-show="!isArticle" />
       </div>
 
       <!-- Header Component including Searchbar -->
@@ -28,19 +28,21 @@ export default {
 
   computed: {
     isArticle() {
-      return !!(
-        (this.$route.name.match('articles-*') &&
-          this.$route.name.includes('-')) ||
-        (this.$route.name.match('projects-*') && this.$route.name.includes('-'))
-      )
-    },
-
-    isHomeIndex() {
-      return !!(
-        this.$route.name.match(/^index$/) ||
-        this.$route.name.match(/^about$/) ||
-        this.$route.name.match(/^repositories$/)
-      )
+      /** Used to switch the Sidebar in Desktop mode
+       *  if the route is inside 'articles' or 'projects'
+       *  e.g. ../articles/my-article or ../projects/my-project
+       *  the Sidebar will contain a Table of Contents.
+       */
+      if (this.$route.name) {
+        return !!(
+          (this.$route.name.match('articles-*') &&
+            this.$route.name.includes('-')) ||
+          (this.$route.name.match('projects-*') &&
+            this.$route.name.includes('-'))
+        )
+      } else {
+        return false
+      }
     }
   },
 
