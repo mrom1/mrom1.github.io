@@ -8,9 +8,7 @@
       </div>
 
       <!-- Header Component including Searchbar -->
-      <div class="headerLayoutContainer">
-        <AppHeader />
-      </div>
+      <AppHeader />
 
       <!-- Article content will be displayed here -->
       <div class="articleLayoutContentContainer">
@@ -89,10 +87,6 @@ export default {
   width: 100%;
   height: 100%;
   z-index: 2;
-}
-
-.headerLayoutContainer {
-  width: 100%;
 }
 
 .sidebarLayoutContainer {

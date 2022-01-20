@@ -31,6 +31,7 @@
   align-items: center;
   justify-content: center;
   max-width: 256px;
+  padding-left: 15px;
 }
 
 .headerLogoContainer img {

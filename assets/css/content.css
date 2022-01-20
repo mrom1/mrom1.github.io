@@ -17,10 +17,6 @@
   font-size: 22px;
 }
 
-.nuxt-content code {
-  font-family: Menlo, Monaco, 'Courier New', monospace;
-}
-
 .nuxt-content ul {
   list-style-type: disc;
 }
@@ -38,4 +34,8 @@
 
 .nuxt-content code {
   background: #1d1f21 !important;
+}
+
+.v-application code {
+  padding: 0 !important;
 }
