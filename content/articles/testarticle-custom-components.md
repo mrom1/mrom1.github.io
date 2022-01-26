@@ -41,14 +41,22 @@ createdAt: 2022-01-07 17:25:42
 
 ### Message Box Education
 <message-box-education>
-  <template #message-box>
+  <template #message-box-education>
     This is a vue component inside markdown using slots
   </template>
 </message-box-education>
 
 ### Message Box Protection
 <message-box-protection>
-  <template #message-box>
+  <template #message-box-protection>
     This is a vue component inside markdown using slots
   </template>
 </message-box-protection>
+
+
+## Image Container Component
+<image-container source="/images/projects/minilockcpp/icon512.png">
+  <template #image-container>
+    Testing a image caption. Minilock logo.
+  </template>
+</image-container>

@@ -50,9 +50,16 @@ The Witch bade her clean the pots and kettles and sweep the floor and keep the f
 >
 >  *Everything* is going according to **plan**.
 
+## Tables
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        |
+| Footer      | Text        |
+| Caption     | Text        |
+| Subheader   | Title       |
 
 ## Lists
-
 ### Ordered Lists
 Markdown:
 1. First item

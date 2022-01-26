@@ -1,6 +1,6 @@
 <template>
   <v-alert prominent dark :type="type">
-    <p><slot name="message-box">default</slot></p>
+    <p><slot name="message-box"></slot></p>
   </v-alert>
 </template>
 

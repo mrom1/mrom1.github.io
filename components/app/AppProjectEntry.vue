@@ -16,9 +16,6 @@
           <div
             class="uppercase tracking-wide text-lg text-green-500 font-semibold"
           >
-            <!--
-            {{ repositoryname }}
-            -->
             <a :href="repositoryurl" target="_blank">{{ repositoryname }}</a>
           </div>
           <p

@@ -10,11 +10,22 @@
 .nuxt-content h2 {
   font-weight: bold;
   font-size: 28px;
+  padding-top: 16px;
+  padding-bottom: 8px;
 }
 
 .nuxt-content h3 {
   font-weight: bold;
   font-size: 22px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+.nuxt-content h4 {
+  font-weight: bold;
+  font-size: 16px;
+  padding-top: 4px;
+  padding-bottom: 2px;
 }
 
 .nuxt-content ul {
@@ -23,6 +34,43 @@
 
 .nuxt-content ol {
   list-style-type: decimal;
+}
+
+.nuxt-content table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.nuxt-content table thead tr {
+  background-color: #48bb78;
+  color: #ffffff;
+  text-align: left;
+}
+
+.nuxt-content table th,
+.nuxt-content table td {
+    padding: 12px 15px;
+}
+
+.nuxt-content table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.nuxt-content table tbody tr:nth-of-type(even) {
+  background-color: rgba(96, 125, 139, 0.3);
+}
+
+.nuxt-content table tbody tr:last-of-type {
+  border-bottom: 2px solid #48bb78;
+}
+
+.nuxt-content table tbody tr.active-row {
+  font-weight: bold;
+  color: #48bb78;
 }
 
 .nuxt-content blockquote {

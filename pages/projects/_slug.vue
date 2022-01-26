@@ -8,10 +8,15 @@
         stripHttpFromUrl(article.repositoryurl)
       }}</a>
       <p class="pb-4">
-        Post last updated: {{ convertDateToLocalTime(article.updatedAt) }}
+        Post created at: {{ convertDateToLocalTime(article.createdAt) }}
       </p>
       <!-- content from markdown -->
       <nuxt-content :document="article" />
+      <br />
+      <v-divider />
+      <p class="pt-4 text-sm">
+        Post last updated: {{ convertDateToLocalTime(article.updatedAt) }}
+      </p>
     </div>
   </article>
 </template>
