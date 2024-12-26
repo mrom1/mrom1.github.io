@@ -24,6 +24,7 @@
             </v-list-item>
           </NuxtLink>
           <v-divider />
+          <!--
           <NuxtLink to="/repositories">
             <v-list-item>
               <v-icon>mdi-source-repository-multiple</v-icon>
@@ -31,6 +32,7 @@
             </v-list-item>
           </NuxtLink>
           <v-divider />
+          -->
           <v-list-item href="https://github.com/mrom1" target="_blank">
             <v-icon>mdi-github</v-icon>
             <v-list-item-title class="pl-2">Github Profile</v-list-item-title>
@@ -49,7 +51,7 @@
 </template>
 
 <style scoped>
-.list-item-group .v-list-item:hover {
+  .list-item-group .v-list-item:hover {
   background-color: #48bb78;
 }
 </style>

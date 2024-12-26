@@ -20,9 +20,14 @@
           <!-- tags for the article -->
           <div v-if="tags.length" style="display: inline-block" class="text-sm">
             -
-            <span v-for="(tag, index) in tags" :key="index" class="tagBox">{{
-              tag
-            }}</span>
+            <span
+              v-for="(tag, index) in tags"
+              :key="index"
+              class="tagBox"
+              @click="onTagClick(tag)"
+            >
+              {{ tag }}
+            </span>
           </div>
         </div>
       </v-row>
@@ -32,38 +37,44 @@
 </template>
 
 <script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true
-    },
+  export default {
+    props: {
+      title: {
+        type: String,
+        required: true
+      },
 
-    date: {
-      type: String,
-      required: true
-    },
+      date: {
+        type: String,
+        required: true
+      },
 
-    readingTime: {
-      type: String,
-      required: true
-    },
+      readingTime: {
+        type: String,
+        required: true
+      },
 
-    tags: {
-      type: Array,
-      required: true
-    },
+      tags: {
+        type: Array,
+        required: true
+      },
 
-    slug: {
-      type: String,
-      required: true
+      slug: {
+        type: String,
+        required: true
+      }
+    },
+    methods: {
+      onTagClick(tag) {
+        // console.log('Tag clicked:', tag) // Debugging log
+        this.$emit('tagClicked', tag)
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-.tagBox {
+  .tagBox {
   color: #3e6d8e;
   background-color: #e0eaf1;
   border-bottom: 1px solid #3e6d8e;
@@ -74,6 +85,10 @@ export default {
   font-size: 90%;
   line-height: 2.4;
   white-space: nowrap;
+}
+
+.tagBox:hover {
+  background-color: #a1c5e4;
 }
 
 .articleEntryDescriptionContainer {

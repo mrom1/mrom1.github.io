@@ -24,29 +24,29 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      errorMessage: 'Page not found'
-    }
-  },
+  export default {
+    data() {
+      return {
+        errorMessage: 'Page not found'
+      }
+    },
 
-  head() {
-    return {
-      title: this.errorMessage
-    }
-  },
+    head() {
+      return {
+        title: this.errorMessage
+      }
+    },
 
-  methods: {
-    hasHistory() {
-      return window.history.length > 2
+    methods: {
+      hasHistory() {
+        return window.history.length > 2
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-.error404TextContainer {
+  .error404TextContainer {
   font-size: 6vw;
   font-family: 'Cavolini', sans-serif;
   height: 100%;

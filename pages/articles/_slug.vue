@@ -18,32 +18,32 @@
 </template>
 
 <script>
-export default {
-  toc: [],
-  title: '',
+  export default {
+    toc: [],
+    title: '',
 
-  async asyncData({ $content, params }) {
-    const article = await $content('articles', params.slug).fetch()
-    return {
-      article,
-      title: article.title,
-      toc: article.toc
+    async asyncData({ $content, params }) {
+      const article = await $content('articles', params.slug).fetch()
+      return {
+        article,
+        title: article.title,
+        toc: article.toc
+      }
+    },
+
+    head() {
+      return {
+        title: this.title
+      }
+    },
+
+    mounted() {
+      const desc = {
+        title: this.title,
+        toc: this.toc
+      }
+
+      this.$store.commit('CHANGE_NAV_ARTICLE_DESCRIPTION', desc)
     }
-  },
-
-  head() {
-    return {
-      title: this.title
-    }
-  },
-
-  mounted() {
-    const desc = {
-      title: this.title,
-      toc: this.toc
-    }
-
-    this.$store.commit('CHANGE_NAV_ARTICLE_DESCRIPTION', desc)
   }
-}
 </script>

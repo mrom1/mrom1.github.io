@@ -8,19 +8,19 @@
 </template>
 
 <script>
-export default {
-  props: {
-    source: {
-      type: String,
-      default: '',
-      required: true
+  export default {
+    props: {
+      source: {
+        type: String,
+        default: '',
+        required: true
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-.app-image-container {
+  .app-image-container {
   text-align: center;
 }
 

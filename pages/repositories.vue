@@ -37,36 +37,36 @@
 </template>
 
 <script>
-import chunk from 'chunk'
+  import chunk from 'chunk'
 
-export default {
-  async asyncData({ $content, params }) {
-    const projects = await $content('projects')
-      .only([
-        'title',
-        'description',
-        'img',
-        'repositoryname',
-        'repositoryurl',
-        'slug'
-      ])
-      .sortBy('title', 'asc')
-      .fetch()
-    return {
-      projects
-    }
-  },
+  export default {
+    async asyncData({ $content, params }) {
+      const projects = await $content('projects')
+        .only([
+          'title',
+          'description',
+          'img',
+          'repositoryname',
+          'repositoryurl',
+          'slug'
+        ])
+        .sortBy('title', 'asc')
+        .fetch()
+      return {
+        projects
+      }
+    },
 
-  head() {
-    return {
-      title: 'Projects'
-    }
-  },
+    head() {
+      return {
+        title: 'Projects'
+      }
+    },
 
-  computed: {
-    chunkedProjectsContent() {
-      return chunk(this.projects)
+    computed: {
+      chunkedProjectsContent() {
+        return chunk(this.projects)
+      }
     }
   }
-}
 </script>

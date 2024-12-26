@@ -1,17 +1,42 @@
 <template>
-  <v-app-bar app fixed eleviation="4" :clipped-left="true">
-    <v-row justify="start" align="center" flex-column style="flex-wrap: nowrap">
-      <v-col xs="3" justify="start" align-self="center" class="flex-grow-0">
+  <v-app-bar app fixed elevation="4" :clipped-left="true">
+    <v-row justify="start" align="center" class="header-container">
+      <!-- Logo Column (256px wide) -->
+      <v-col class="logo-column" cols="auto">
         <AppHeaderLogo />
       </v-col>
-      <div v-show="$vuetify.breakpoint.mdAndUp" class="pl-8">
-        <v-btn text color="#48bb78" to="/">ARTICLES</v-btn>
-        <v-btn text color="#48bb78" to="/repositories">PROJECTS</v-btn>
-      </div>
-      <v-col xs="9" justify="start" align-self="center">
+
+      <!-- Search Bar Column (takes the remaining space) -->
+      <v-col class="searchbar-column" cols="auto">
         <AppSearchbar />
       </v-col>
+
+      <!-- Header Menu -->
       <AppHeaderMenu />
     </v-row>
   </v-app-bar>
 </template>
+
+<style scoped>
+  /* Flex container for the header */
+  .header-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* Logo column should take up 256px */
+  .logo-column {
+    width: 256px;
+  }
+
+  /* Search bar should fill the remaining space */
+  .searchbar-column {
+    flex-grow: 1;  /* Let search bar take the remaining space */
+  }
+
+  /* Make sure the search bar is full width */
+  .searchbarContainer .v-text-field {
+    width: 100%;
+  }
+</style>

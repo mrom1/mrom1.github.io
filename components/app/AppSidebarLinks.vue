@@ -20,6 +20,7 @@
 
       <v-spacer />
 
+      <!--
       <NuxtLink to="repositories">
         <v-tooltip bottom>
           <template #activator="{ on, attrs }">
@@ -33,8 +34,8 @@
           <span>Projects</span>
         </v-tooltip>
       </NuxtLink>
-
       <v-spacer />
+      -->
 
       <v-tooltip bottom>
         <template #activator="{ on, attrs }">
@@ -71,13 +72,13 @@
 </template>
 
 <script>
-export default {
-  name: 'AppSidebarLinks'
-}
+  export default {
+    name: 'AppSidebarLinks'
+  }
 </script>
 
 <style>
-.sidebarContentLinksContainer {
+  .sidebarContentLinksContainer {
   align-self: flex-end;
   justify-content: flex-end;
 }

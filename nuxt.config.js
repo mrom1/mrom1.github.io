@@ -12,7 +12,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: 'mrom1/blog',
+    title: 'mrom1/articles',
     author: 'mrom1',
     meta: [
       { charset: 'utf-8' },
@@ -20,8 +20,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content:
-          'Software Development Blog about IT Security, Reverse Engineering and Modern C++.'
+        content: 'Articles about modern Software Development practices.'
       }
     ],
     link: [

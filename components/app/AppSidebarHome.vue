@@ -13,6 +13,7 @@
           <v-list-item-content align="center">
             <v-list-item-title class="title">
               <v-img
+                eager
                 lazy-src="/images/profile/github_profile_picture_small.png"
                 max-height="100%"
                 max-width="100%"
@@ -39,7 +40,7 @@
 </template>
 
 <script>
-export default {
-  name: 'AppSidebarHome'
-}
+  export default {
+    name: 'AppSidebarHome'
+  }
 </script>

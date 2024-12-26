@@ -48,17 +48,17 @@
 </template>
 
 <script>
-export default {
-  computed: {
-    articleDescription() {
-      return this.$store.state.articleDescription
+  export default {
+    computed: {
+      articleDescription() {
+        return this.$store.state.articleDescription
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-a {
+  a {
   color: #a0aec0 !important;
 }
 

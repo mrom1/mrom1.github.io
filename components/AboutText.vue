@@ -1,24 +1,29 @@
 <template>
   <div>
-    <p>Hi there! 👋</p>
-    <p>I'm a computer engineer from Germany.</p>
+    <!-- Welcome Logo -->
+    <WelcomeText />
+    <br />
+    <br />
+    <v-divider />
+    <br />
+    <br />
     <p>
-      I have a passion for low-level coding, these days mostly in C++, in the
-      past I worked in embedded software development for the German automotive
-      industry, as well as in the field of visualization (Virtual Reality /
-      OpenGL). Furthermore, I have a particular interest in security,
-      cryptography, reverse engineering, and modern C++ concepts.
+      Creator and maintainer:
+      <a href="https://github.com/mrom1">github.com/mrom1</a>
     </p>
     <p>
-      Lately, I have been focusing more on topics like low-level networking,
-      microservices, Internet of Things, and some front-end development mostly
-      done with Vue.js.
+      This website serves a sharing and a documenting purpose, every article is
+      written by myself, as well as the source code for this website, which is
+      OpenSource and hosted on this github account.
     </p>
     <p>
-      This Blog serves a sharing and a documenting purpose, at the time of
-      writing every article is written by myself, as well as the software for
-      this blog, which is OpenSource and hosted on this Github Account. If you
-      any ideas or something to contribute feel free to hit me up via Github!
+      For copyright and license information for projects or articles written, or
+      any code found on this website, please see the license.txt file in each
+      individual repository.
+    </p>
+    <p>
+      For any issues, please contact me through this github account only:
+      <a href="https://github.com/mrom1">mrom1</a>.
     </p>
   </div>
 </template>

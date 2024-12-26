@@ -36,37 +36,37 @@
 </template>
 
 <script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true
-    },
+  export default {
+    props: {
+      title: {
+        type: String,
+        required: true
+      },
 
-    description: {
-      type: String,
-      required: true
-    },
+      description: {
+        type: String,
+        required: true
+      },
 
-    img: {
-      type: String,
-      required: true
-    },
+      img: {
+        type: String,
+        required: true
+      },
 
-    repositoryname: {
-      type: String,
-      required: true
-    },
+      repositoryname: {
+        type: String,
+        required: true
+      },
 
-    repositoryurl: {
-      type: String,
-      required: true
-    },
+      repositoryurl: {
+        type: String,
+        required: true
+      },
 
-    slug: {
-      type: String,
-      required: true
+      slug: {
+        type: String,
+        required: true
+      }
     }
   }
-}
 </script>

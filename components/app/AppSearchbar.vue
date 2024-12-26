@@ -35,55 +35,55 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      loading: false,
-      items: [],
-      search: null,
-      select: null
-    }
-  },
-  watch: {
-    search(val) {
-      val && val !== this.select && this.querySelections(val)
-    }
-  },
-  async mounted() {
-    this.items = await this.$content('articles')
-      .limit(6)
-      .only(['title', 'slug', 'createdAt'])
-      .sortBy('createdAt', 'desc')
-      .fetch()
-  },
-  methods: {
-    gotoArticle(article) {
-      if (this.items.some((i) => i.slug === article.slug)) {
-        this.$router.push({
-          name: 'articles-slug',
-          params: { slug: article.slug }
-        })
-        this.$refs.searchbarForm.reset()
+  export default {
+    data() {
+      return {
+        loading: false,
+        items: [],
+        search: null,
+        select: null
       }
     },
-
-    async querySelections(searchQuery) {
-      this.loading = true
-      const articles = await this.$content('articles')
+    watch: {
+      search(val) {
+        val && val !== this.select && this.querySelections(val)
+      }
+    },
+    async mounted() {
+      this.items = await this.$content('articles')
         .limit(6)
-        .search(searchQuery)
-        .only(['title', 'slug'])
+        .only(['title', 'slug', 'createdAt'])
+        .sortBy('createdAt', 'desc')
         .fetch()
+    },
+    methods: {
+      gotoArticle(article) {
+        if (this.items.some((i) => i.slug === article.slug)) {
+          this.$router.push({
+            name: 'articles-slug',
+            params: { slug: article.slug }
+          })
+          this.$refs.searchbarForm.reset()
+        }
+      },
 
-      this.loading = false
-      this.items = articles
+      async querySelections(searchQuery) {
+        this.loading = true
+        const articles = await this.$content('articles')
+          .limit(6)
+          .search(searchQuery)
+          .only(['title', 'slug'])
+          .fetch()
+
+        this.loading = false
+        this.items = articles
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-.searchbarContainer .v-text-field {
-  max-width: 400px;
-}
+  .searchbarContainer .v-text-field {
+    width: 100%; /* Ensure the text field inside v-combobox expands to fill */
+  }
 </style>

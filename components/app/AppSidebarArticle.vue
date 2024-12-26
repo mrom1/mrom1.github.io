@@ -20,13 +20,13 @@
 </template>
 
 <script>
-export default {
-  name: 'AppSidebarArticle',
+  export default {
+    name: 'AppSidebarArticle',
 
-  computed: {
-    articleTableOfContent() {
-      return this.$store.state.articleTableOfContents
+    computed: {
+      articleTableOfContent() {
+        return this.$store.state.articleTableOfContents
+      }
     }
   }
-}
 </script>

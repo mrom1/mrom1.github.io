@@ -8,9 +8,9 @@
 </template>
 
 <script>
-export default {
-  layout: 'default',
-  // eslint-disable-next-line vue/require-prop-types
-  props: ['error']
-}
+  export default {
+    layout: 'default',
+    // eslint-disable-next-line vue/require-prop-types
+    props: ['error']
+  }
 </script>

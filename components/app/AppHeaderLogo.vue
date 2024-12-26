@@ -11,13 +11,13 @@
           <span class="text-base xs:text-sm font-bold text-gray-200"
             >mrom1/</span
           ><span class="text-base xs:text-sm font-bold text-green-500"
-            >blog</span
+            >articles</span
           >
         </p>
         <p v-if="!$vuetify.theme.dark" class="pt-3">
           <span class="text-base xs:text-sm font-bold text-black">mrom1/</span
           ><span class="text-base xs:text-sm font-bold text-green-500"
-            >blog</span
+            >articles</span
           >
         </p>
       </div>
@@ -26,12 +26,11 @@
 </template>
 
 <style scoped>
-.headerLogoContainer {
+  .headerLogoContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   max-width: 256px;
-  padding-left: 15px;
 }
 
 .headerLogoContainer img {

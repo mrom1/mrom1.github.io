@@ -28,29 +28,29 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      errorMessage: 'Oops! Something went wrong.'
-    }
-  },
+  export default {
+    data() {
+      return {
+        errorMessage: 'Oops! Something went wrong.'
+      }
+    },
 
-  head() {
-    return {
-      title: this.errorMessage
-    }
-  },
+    head() {
+      return {
+        title: this.errorMessage
+      }
+    },
 
-  methods: {
-    hasHistory() {
-      return window.history.length > 2
+    methods: {
+      hasHistory() {
+        return window.history.length > 2
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-.errorPageContainer {
+  .errorPageContainer {
   max-height: 90vh;
   max-width: 100vw;
 }
