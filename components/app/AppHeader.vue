@@ -2,12 +2,12 @@
   <v-app-bar app fixed elevation="4" :clipped-left="true">
     <v-row justify="start" align="center" class="header-container">
       <!-- Logo Column (256px wide) -->
-      <v-col class="logo-column" cols="auto">
+      <v-col class="logo-column" xs="2" sm="auto">
         <AppHeaderLogo />
       </v-col>
 
       <!-- Search Bar Column (takes the remaining space) -->
-      <v-col class="searchbar-column" cols="auto">
+      <v-col class="searchbar-column" xs="6" sm="auto">
         <AppSearchbar />
       </v-col>
 
