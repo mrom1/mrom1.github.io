@@ -20,7 +20,7 @@
 
       <v-spacer />
 
-      <!--
+      <!-- Removed repositories for now
       <NuxtLink to="repositories">
         <v-tooltip bottom>
           <template #activator="{ on, attrs }">
@@ -48,7 +48,7 @@
             >
           </v-btn>
         </template>
-        <span>Github profile</span>
+        <span>Github Profile</span>
       </v-tooltip>
 
       <v-spacer />

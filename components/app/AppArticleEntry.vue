@@ -17,9 +17,8 @@
           -
           <v-icon size="14">mdi-clock</v-icon>
           <span class="text-white text-sm">{{ readingTime }}</span>
-          <!-- tags for the article -->
-          <div v-if="tags.length" style="display: inline-block" class="text-sm">
-            -
+          <!-- Tags for the article -->
+          <div v-if="tags.length" class="tagBoxContainer text-sm">
             <span
               v-for="(tag, index) in tags"
               :key="index"
@@ -32,6 +31,8 @@
         </div>
       </v-row>
     </v-col>
+    <!-- Spacer between tagboxes and divider (horizontal line) before new entry -->
+    <div style="height: 10px"></div>
     <v-divider />
   </div>
 </template>
@@ -66,7 +67,6 @@
     },
     methods: {
       onTagClick(tag) {
-        // console.log('Tag clicked:', tag) // Debugging log
         this.$emit('tagClicked', tag)
       }
     }
@@ -74,7 +74,17 @@
 </script>
 
 <style scoped>
-  .tagBox {
+  /* Container for tagBox */
+.tagBoxContainer {
+  display: flex;
+  flex-wrap: wrap; /* Enables wrapping if tags exceed available space */
+  align-items: center; /* Aligns items nicely in the row */
+  gap: 2px; /* Adds a small space between tagBox elements */
+  margin-top: 2px; 
+}
+
+/* Style for each tagBox */
+.tagBox {
   color: #3e6d8e;
   background-color: #e0eaf1;
   border-bottom: 1px solid #3e6d8e;
@@ -83,15 +93,23 @@
   margin: 2px 2px 2px 0;
   text-decoration: none;
   font-size: 90%;
-  line-height: 2.4;
+  line-height: 1.25;
   white-space: nowrap;
+  cursor: pointer;
 }
 
+/* Hover effect for tagBox */
 .tagBox:hover {
   background-color: #a1c5e4;
 }
 
+/* Ensure proper alignment for description container */
 .articleEntryDescriptionContainer {
   justify-content: center;
+}
+
+/* Padding for article entry container */
+.articleEntryContainer {
+  padding-top: 10px
 }
 </style>

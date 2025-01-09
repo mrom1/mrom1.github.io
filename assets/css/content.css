@@ -1,6 +1,11 @@
+html, body {
+  background-color: #323250; /* Replace with your desired color */
+  color: white; /* You can set a default text color here as well */
+}
+
 .nuxt-content {
   font-family: DM Sans,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  background-color: rgba(50, 50, 80, 0.7);
+  background-color: #323250;
 }
 
 .nuxt-content p {
@@ -81,7 +86,7 @@
 }
 
 .nuxt-content code {
-  background: #1d1f21 !important;
+  background: #1d2120 !important;
 }
 
 .v-application code {

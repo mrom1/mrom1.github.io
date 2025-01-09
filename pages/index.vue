@@ -13,7 +13,7 @@
       <button
         v-for="tag in allTags"
         :key="tag"
-        :class="['topic-tag', { active: selectedTags.includes(tag) }]"
+        :class="['topic-button', { active: selectedTags.includes(tag) }]"
         @click="toggleTag(tag)"
       >
         {{ tag }}
@@ -105,7 +105,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 16px;
 }
 
@@ -114,26 +114,26 @@
   margin-right: 8px;
 }
 
-.topic-tag {
+.topic-button {
   color: #3e6d8e;
   background-color: #e0eaf1;
   border: 1px solid #3e6d8e;
   border-radius: 4px;
-  padding: 5px 8px;
+  padding: 4px 6px;
   cursor: pointer;
   font-size: 90%;
-  line-height: 1.5;
+  line-height: 1.25;
   white-space: nowrap;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
 }
 
-.topic-tag:hover {
+.topic-button:hover {
   background-color: #d2e0ec;
   border-color: #d2e0ec;
   color: #007bff;
 }
 
-.topic-tag.active {
+.topic-button.active {
   background-color: #48bb78;
   color: white;
   border-color: #48bb78;
