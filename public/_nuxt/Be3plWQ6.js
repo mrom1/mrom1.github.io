@@ -1,0 +1,1 @@
+import{q as t,h as n,o as s,g as o}from"#entry";const c={},a={class:"mdc-test-component"};function r(d,e){return s(),n("div",a,[...e[0]||(e[0]=[o("h3",null,"Hello from MDC!",-1),o("p",null,"This is a custom component rendered via Nuxt MDC.",-1)])])}const _=Object.assign(t(c,[["render",r],["__scopeId","data-v-b9429a5b"]]),{__name:"MdcTestComponent"});export{_ as default};
