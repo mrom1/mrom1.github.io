@@ -1,0 +1,1 @@
+import{q as s,h as t,o,g as a,U as c}from"#entry";const l={},n={class:"flex-1 flex flex-col"},r={class:"flex-1 pt-[72px]"};function f(e,_){return o(),t("div",n,[a("main",r,[c(e.$slots,"default")])])}const i=s(l,[["render",f]]);export{i as default};
