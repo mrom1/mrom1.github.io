@@ -1,0 +1,1 @@
+import{G as s,o as t,s as o,q as a,j as c}from"./D__LgNJ4.js";const l={},n={class:"flex-1 flex flex-col"},r={class:"flex-1 pt-[72px]"};function f(e,_){return t(),o("div",n,[a("main",r,[c(e.$slots,"default")])])}const i=s(l,[["render",f]]);export{i as default};

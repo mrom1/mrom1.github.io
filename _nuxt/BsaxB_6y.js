@@ -1,0 +1,1 @@
+import{$ as r,c,o as l,s as p,j as m,n as u,a1 as s}from"./D__LgNJ4.js";const i={base:""},_={__name:"ProseEm",props:{class:{type:String,required:!1}},setup(e){const a=e,o=r(),t=c(()=>s({extend:s(i),...o.ui?.prose?.em||{}}));return(n,f)=>(l(),p("em",{class:u(t.value({class:a.class}))},[m(n.$slots,"default")],2))}};export{_ as default};
