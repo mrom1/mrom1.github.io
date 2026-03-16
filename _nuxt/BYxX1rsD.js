@@ -1,1 +1,0 @@
-import{$ as r,c,o as l,s as p,j as u,n as i,a1 as s}from"./D__LgNJ4.js";const m={base:""},g={__name:"ProseStrong",props:{class:{type:null,required:!1}},setup(e){const a=e,o=r(),t=c(()=>s({extend:s(m),...o.ui?.prose?.strong||{}}));return(n,f)=>(l(),p("strong",{class:i(t.value({class:a.class}))},[u(n.$slots,"default")],2))}};export{g as default};

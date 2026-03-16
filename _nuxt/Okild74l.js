@@ -1,1 +1,0 @@
-import{$ as c,c as l,o as r,s as p,j as u,n as d,a1 as s}from"./D__LgNJ4.js";const i={base:""},_={__name:"ProseTbody",props:{class:{type:null,required:!1}},setup(e){const a=e,o=c(),t=l(()=>s({extend:s(i),...o.ui?.prose?.tbody||{}}));return(n,m)=>(r(),p("tbody",{class:d(t.value({class:a.class}))},[u(n.$slots,"default")],2))}};export{_ as default};
